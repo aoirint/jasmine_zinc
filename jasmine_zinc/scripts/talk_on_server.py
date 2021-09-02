@@ -11,12 +11,14 @@ def main():
     parser.add_argument('cid', type=int)
     parser.add_argument('talktext', type=str)
     parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
+    parser.add_argument('--timeout', type=float, default=3)
     add_talk_arguments(parser=parser)
     args = parser.parse_args()
 
     cid = args.cid
     talktext = args.talktext
     server_url = args.server_url
+    timeout = args.timeout
 
     assert server_url is not None, 'Server URL must be specified (option --server-url or env var SERVER_URL).'
 
@@ -26,6 +28,7 @@ def main():
         talk=Talk(
             talktext=talktext,
         ),
+        timeout=timeout,
     )
 
     print(result)
