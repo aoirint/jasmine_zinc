@@ -1,12 +1,17 @@
+from .Avatar import (
+    Avatar,
+    dict2avatar,
+)
+
 from .get_avatars import (
     get_avatars,
-    Avatar,
 )
 
 from .Talk import (
     Talk,
     TalkEffects,
     TalkEmotions,
+    talk2dict,
 )
 
 from .talk_on_server import (
