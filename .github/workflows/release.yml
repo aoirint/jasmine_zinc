@@ -18,7 +18,9 @@ jobs:
           python-version: 3.x
 
       - name: Install Dependencies
-        run: pip3 install -r requirements.txt
+        run: |
+          pip3 install -r requirements.txt
+          pip3 install wheel
 
       - name: Build Package
         run: python3 setup.py sdist bdist_wheel
