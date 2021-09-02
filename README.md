@@ -24,11 +24,9 @@ SERVER_URL=http://user:password@server_ip:7180
 
 ### Execute
 ```shell
-pip3 install .
+./scripts/get_avatars
 
-python3 jasmine_zinc/scripts/get_avatars.py
+./scripts/record_talk 5201 てすと
 
-python3 jasmine_zinc/scripts/record_talk.py 5201 てすと
-
-python3 jasmine_zinc/scripts/talk_on_server.py 5201 てすと
+./scripts/talk_on_server 5201 てすと
 ```

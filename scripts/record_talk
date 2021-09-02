@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent))
+
+from jasmine_zinc.scripts.record_talk import main
+
+if __name__ == '__main__':
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    main()
