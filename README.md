@@ -1,6 +1,6 @@
 # Jasmine Zinc
 
-## Console Scripts
+## Usage: Console Scripts
 ### Environment Variables
 ```env
 SERVER_URL=http://user:password@server_ip:7180
@@ -14,3 +14,21 @@ Talk on server.
 
 ### jaz_record_talk
 Record a talk voice on server, download as a wave file and play on client.
+
+
+## Development: Test Console Scripts
+### Create .env file
+```env
+SERVER_URL=http://user:password@server_ip:7180
+```
+
+### Execute
+```shell
+pip3 install .
+
+python3 jasmine_zinc/scripts/get_avatars.py
+
+python3 jasmine_zinc/scripts/record_talk.py 5201 てすと
+
+python3 jasmine_zinc/scripts/talk_on_server.py 5201 てすと
+```
