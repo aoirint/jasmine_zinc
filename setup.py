@@ -27,7 +27,7 @@ setup(
     entry_points = {
         'console_scripts': [
             'jaz_get_avatars = jasmine_zinc.scripts.get_avatars:main',
-            'jaz_talk_on_server = jasmine_zinc.scripts.jaz_talk_on_server:main',
+            'jaz_talk_on_server = jasmine_zinc.scripts.talk_on_server:main',
             'jaz_record_talk = jasmine_zinc.scripts.record_talk:main',
         ],
     },
