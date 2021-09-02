@@ -18,6 +18,8 @@ def main():
     talktext = args.talktext
     server_url = args.server_url
 
+    assert server_url is not None, 'Server URL must be specified (option --server-url or env var SERVER_URL).'
+
     result = talk_on_server(
         server_url=server_url,
         cid=cid,

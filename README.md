@@ -1,7 +1,7 @@
 # Jasmine Zinc
 
 ## Console Scripts
-### Create .env file
+### Environment Variables
 ```env
 SERVER_URL=http://user:password@server_ip:7180
 ```

@@ -26,6 +26,8 @@ def main():
     server_url = args.server_url
     frequency = args.frequency
 
+    assert server_url is not None, 'Server URL must be specified (option --server-url or env var SERVER_URL).'
+
     no_play = args.no_play
     save = args.save
     save_path = args.save_path
