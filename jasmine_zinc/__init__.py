@@ -1,3 +1,5 @@
+__VERSION__ = '20210903a'
+
 from .Avatar import (
     Avatar,
     dict2avatar,

@@ -4,6 +4,8 @@ from typing import (
     List,
 )
 
+from jasmine_zinc import __VERSION__ as VERSION
+
 install_requires: List[str] = [
     # dependencies like requirements.txt
     'requests', # https://pypi.org/project/requests
@@ -16,7 +18,7 @@ if python_version < (3, 7):
 
 setup(
     name='jasmine_zinc',
-    version='20210903a',
+    version=VERSION,
     # license='MIT',
 
     packages=find_packages(),
