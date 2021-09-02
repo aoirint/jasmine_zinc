@@ -1,5 +1,44 @@
 # Jasmine Zinc
 
+## Usage: Module
+
+### get_avatars
+```python
+from jasmine_zinc import get_avatars
+
+avatars = get_avatars(
+    server_url='http://user:password@server_ip:7180',
+)
+```
+
+### talk_on_server
+```python
+from jasmine_zinc import talk_on_server, Talk
+
+result = talk_on_server(
+    server_url='http://user:password@server_ip:7180',
+    cid=5201,
+    talk=Talk(
+        talktext='てすと',
+    ),
+)
+```
+
+### record_talk
+```python
+from jasmine_zinc import record_talk, Talk
+
+result = record_talk(
+    server_url='http://user:password@server_ip:7180',
+    cid=5201,
+    talk=Talk(
+        talktext='てすと',
+    ),
+    frequency=48000,
+)
+```
+
+
 ## Usage: Console Scripts
 ### Environment Variables
 ```env
