@@ -7,7 +7,7 @@ SERVER_URL=http://user:password@server_ip:7180
 ```
 
 ### jaz_get_avatars
-Fetch avatar list (`cid`, `name`, etc.).
+Fetch avatar list (`cid`, `name`, etc.). Currently, the output format is work in progress.
 
 ```shell
 jaz_get_avatars --server-url=http://user:password@server_ip:7180
