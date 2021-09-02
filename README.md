@@ -48,8 +48,7 @@ import tempfile
 with tempfile.NamedTemporaryFile() as fp:
     fp.write(result.wave_binary)
 
-    if not no_play:
-        playsound(fp.name)
+    playsound(fp.name)
 ```
 
 
