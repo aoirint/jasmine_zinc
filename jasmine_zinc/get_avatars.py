@@ -9,9 +9,10 @@ from .Avatar import (
 
 def get_avatars(
     server_url: str,
+    timeout: float = 3,
 ) -> Dict[str, Any]:
     api_url = urljoin(server_url, 'AVATOR2')
-    r = requests.get(api_url, timeout=3)
+    r = requests.get(api_url, timeout=timeout)
 
     avatar_list = r.json()
     avatars: List[Avatar] = []

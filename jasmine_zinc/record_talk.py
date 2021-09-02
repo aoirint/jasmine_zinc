@@ -25,6 +25,7 @@ def record_talk(
     cid: int,
     talk: Talk,
     frequency: int,
+    timeout: float = 3,
 ) -> RecordTalkResponse:
     api_url = urljoin(server_url, f'SAVE2/{int(cid)}/{int(frequency)}')
 
@@ -34,7 +35,7 @@ def record_talk(
 
     data = talk2dict(talk=talk)
 
-    r = requests.post(api_url, headers=headers, data=json.dumps(data), timeout=3)
+    r = requests.post(api_url, headers=headers, data=json.dumps(data), timeout=timeout)
 
     response = r.content
 

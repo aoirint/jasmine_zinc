@@ -16,6 +16,7 @@ def talk_on_server(
     server_url: str,
     cid: int,
     talk: Talk,
+    timeout: float = 3,
 ) -> TalkOnServerResponse:
     api_url = urljoin(server_url, f'PLAY2/{int(cid)}')
 
@@ -25,7 +26,7 @@ def talk_on_server(
 
     data = talk2dict(talk=talk)
 
-    r = requests.post(api_url, headers=headers, data=json.dumps(data), timeout=3)
+    r = requests.post(api_url, headers=headers, data=json.dumps(data), timeout=timeout)
 
     response = r.json()
 
