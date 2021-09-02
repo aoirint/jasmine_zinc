@@ -4,6 +4,7 @@ import os
 from jasmine_zinc import (
     record_talk,
     Talk,
+    add_talk_arguments,
 )
 from playsound import playsound
 import tempfile
@@ -22,6 +23,7 @@ if __name__ == '__main__':
     parser.add_argument('--save', action='store_true')
     parser.add_argument('--save-path', type=str, default='output.wav')
     parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
+    add_talk_arguments(parser=parser)
     args = parser.parse_args()
 
     cid = args.cid
