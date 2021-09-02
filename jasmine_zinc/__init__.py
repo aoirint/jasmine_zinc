@@ -18,3 +18,8 @@ from .talk_on_server import (
     talk_on_server,
     TalkOnServerResponse,
 )
+
+from .record_talk import (
+    record_talk,
+    RecordTalkResponse,
+)
