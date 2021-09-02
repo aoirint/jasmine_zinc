@@ -17,7 +17,7 @@ def talk_on_server(
     cid: int,
     talk: Talk,
 ) -> TalkOnServerResponse:
-    api_url = urljoin(server_url, f'PLAY2/{cid}')
+    api_url = urljoin(server_url, f'PLAY2/{int(cid)}')
 
     headers = {
         'Content-Type': 'application/json',

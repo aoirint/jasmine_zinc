@@ -26,7 +26,7 @@ def record_talk(
     talk: Talk,
     frequency: int,
 ) -> RecordTalkResponse:
-    api_url = urljoin(server_url, f'SAVE2/{cid}/{frequency}')
+    api_url = urljoin(server_url, f'SAVE2/{int(cid)}/{int(frequency)}')
 
     headers = {
         'Content-Type': 'application/json',
