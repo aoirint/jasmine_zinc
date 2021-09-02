@@ -19,7 +19,7 @@ if python_version < (3, 7):
 setup(
     name='jasmine_zinc',
     version=VERSION,
-    # license='MIT',
+    license='MIT',
 
     packages=find_packages(),
     include_package_data=True,
@@ -31,10 +31,12 @@ setup(
 
     url='https://github.com/aoirint/jasmine_zinc',
     description='',
+    long_description=open('README.md', 'r').read(),
+    long_description_content_type='text/markdown',
 
     classifiers=[
         'Development Status :: 3 - Alpha',
-        # 'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
