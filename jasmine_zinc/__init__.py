@@ -1,4 +1,4 @@
-__VERSION__ = '20210903.7'
+__VERSION__ = '20210903.8'
 
 from .Avatar import (
     Avatar,
