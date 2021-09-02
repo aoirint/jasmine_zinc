@@ -21,7 +21,7 @@ if __name__ == '__main__':
     parser.add_argument('--no-play', action='store_true')
     parser.add_argument('--save', action='store_true')
     parser.add_argument('--save-path', type=str, default='output.wav')
-    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'))
+    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
     args = parser.parse_args()
 
     cid = args.cid

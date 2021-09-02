@@ -25,3 +25,9 @@ from .record_talk import (
     record_talk,
     RecordTalkResponse,
 )
+
+from .add_talk_arguments import (
+    add_talk_arguments,
+    add_talk_arguments_effects,
+    add_talk_arguments_emotions,
+)

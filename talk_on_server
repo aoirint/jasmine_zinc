@@ -4,6 +4,7 @@ import os
 from jasmine_zinc import (
     talk_on_server,
     Talk,
+    add_talk_arguments,
 )
 
 if __name__ == '__main__':
@@ -14,7 +15,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('cid', type=int)
     parser.add_argument('talktext', type=str)
-    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'))
+    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
+    add_talk_arguments(parser=parser)
     args = parser.parse_args()
 
     cid = args.cid

@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'))
+    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
     args = parser.parse_args()
 
     server_url = args.server_url
