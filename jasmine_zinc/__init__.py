@@ -3,9 +3,13 @@ from .get_avatars import (
     Avatar,
 )
 
-from .talk_on_server import (
-    talk_on_server,
+from .Talk import (
     Talk,
     TalkEffects,
     TalkEmotions,
+)
+
+from .talk_on_server import (
+    talk_on_server,
+    TalkOnServerResponse,
 )

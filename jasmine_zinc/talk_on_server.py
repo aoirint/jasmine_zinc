@@ -1,39 +1,19 @@
 from urllib.parse import urljoin
 import json
 import requests
-from typing import Dict, List, Any
 from dataclasses import dataclass
 
-@dataclass(frozen=True)
-class TalkEffects:
-    volume: float = 1
-    speed: float = 1
-    pitch: float = 1
-    intonation: float = 1
-    shortpause: int = 150
-    longpause: int = 370
-
-@dataclass(frozen=True)
-class TalkEmotions:
-    joy: float = 0
-    anger: float = 0
-    sadness: float = 0
+from .Talk import Talk
 
 @dataclass
-class Talk:
-    talktext: str
-    effects: TalkEffects = TalkEffects()
-    emotions: TalkEmotions = TalkEmotions()
-
-@dataclass
-class TalkResponse:
+class TalkOnServerResponse:
     message: str
 
 def talk_on_server(
     server_url: str,
     cid: int,
     talk: Talk,
-) -> TalkResponse:
+) -> TalkOnServerResponse:
     api_url = urljoin(server_url, f'PLAY2/{cid}')
 
     headers = {
@@ -61,7 +41,7 @@ def talk_on_server(
 
     response = r.json()
 
-    ret = TalkResponse(
+    ret = TalkOnServerResponse(
         message=response['message'],
     )
 
