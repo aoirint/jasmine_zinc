@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import os
+from jasmine_zinc import (
+    talk_on_server,
+    Talk,
+)
+
+if __name__ == '__main__':
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('cid', type=int)
+    parser.add_argument('talktext', type=str)
+    parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'))
+    args = parser.parse_args()
+
+    cid = args.cid
+    talktext = args.talktext
+    server_url = args.server_url
+
+    result = talk_on_server(
+        server_url=server_url,
+        cid=cid,
+        talk=Talk(
+            talktext=talktext,
+        ),
+    )
+
+    print(result)
