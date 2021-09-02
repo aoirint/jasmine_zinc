@@ -1,15 +1,16 @@
 # Jasmine Zinc
 
-## Example Programs
+## Console Scripts
 ### Create .env file
 ```env
 SERVER_URL=http://user:password@server_ip:7180
 ```
-### get_avatars
+
+### jaz_get_avatars
 Fetch avatar list (`cid`, `name`, etc.).
 
-### talk_on_server
+### jaz_talk_on_server
 Talk on server.
 
-### record_talk
+### jaz_record_talk
 Record a talk voice on server, download as a wave file and play on client.

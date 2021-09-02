@@ -1,12 +1,7 @@
-#!/usr/bin/env python3
-
 import os
 from jasmine_zinc import get_avatars
 
-if __name__ == '__main__':
-    from dotenv import load_dotenv
-    load_dotenv()
-
+def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
@@ -19,3 +14,9 @@ if __name__ == '__main__':
     )
 
     print(avatars)
+
+if __name__ == '__main__':
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    main()

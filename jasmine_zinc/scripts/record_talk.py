@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 from jasmine_zinc import (
     record_talk,
@@ -10,10 +8,7 @@ from playsound import playsound
 import tempfile
 from shutil import copyfile
 
-if __name__ == '__main__':
-    from dotenv import load_dotenv
-    load_dotenv()
-
+def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('cid', type=int)
@@ -53,3 +48,9 @@ if __name__ == '__main__':
 
         if save:
             copyfile(fp.name, save_path)
+
+if __name__ == '__main__':
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    main()
