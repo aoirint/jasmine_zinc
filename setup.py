@@ -9,6 +9,7 @@ from jasmine_zinc import __VERSION__ as VERSION
 install_requires: List[str] = [
     # dependencies like requirements.txt
     'requests', # https://pypi.org/project/requests
+    'playsound', # https://pypi.org/project/playsound
 ]
 
 python_version = sys.version_info

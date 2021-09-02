@@ -9,6 +9,8 @@ from jasmine_zinc import get_avatars
 avatars = get_avatars(
     server_url='http://user:password@server_ip:7180',
 )
+
+print(avatars)
 ```
 
 ### talk_on_server
@@ -22,6 +24,8 @@ result = talk_on_server(
         talktext='てすと',
     ),
 )
+
+print(result.message)
 ```
 
 ### record_talk
@@ -36,6 +40,16 @@ result = record_talk(
     ),
     frequency=48000,
 )
+
+
+from playsound import playsound
+import tempfile
+
+with tempfile.NamedTemporaryFile() as fp:
+    fp.write(result.wave_binary)
+
+    if not no_play:
+        playsound(fp.name)
 ```
 
 
