@@ -26,7 +26,7 @@ SERVER_URL=http://user:password@server_ip:7180
 ```shell
 ./scripts/get_avatars
 
-./scripts/record_talk 5201 てすと
-
 ./scripts/talk_on_server 5201 てすと
+
+./scripts/record_talk 5201 てすと
 ```
