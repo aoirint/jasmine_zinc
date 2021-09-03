@@ -2,6 +2,7 @@ from urllib.parse import urljoin
 import json
 import requests
 from dataclasses import dataclass
+from typing import Union, Tuple
 
 from .Talk import (
     Talk,
@@ -16,7 +17,7 @@ def talk_on_server(
     server_url: str,
     cid: int,
     talk: Talk,
-    timeout: float = 3,
+    timeout: Union[float, Tuple[float, float]] = (3, None),
 ) -> TalkOnServerResponse:
     api_url = urljoin(server_url, f'PLAY2/{int(cid)}')
 

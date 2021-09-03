@@ -2,6 +2,7 @@ from urllib.parse import urljoin
 import json
 import requests
 from dataclasses import dataclass
+from typing import Union, Tuple
 
 from .Talk import (
     Talk,
@@ -25,7 +26,7 @@ def record_talk(
     cid: int,
     talk: Talk,
     frequency: int,
-    timeout: float = 15,
+    timeout: Union[float, Tuple[float, float]] = (3, None),
 ) -> RecordTalkResponse:
     api_url = urljoin(server_url, f'SAVE2/{int(cid)}/{int(frequency)}')
 
