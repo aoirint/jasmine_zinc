@@ -19,7 +19,7 @@ def main():
     parser.add_argument('--save', action='store_true')
     parser.add_argument('--save-path', type=str, default='output.wav')
     parser.add_argument('--server-url', type=str, default=os.environ.get('SERVER_URL'), help='AssistantSeika HTTP Server')
-    parser.add_argument('--timeout', type=float, default=3)
+    parser.add_argument('--timeout', type=float, default=15)
     add_talk_arguments(parser=parser)
     args = parser.parse_args()
 

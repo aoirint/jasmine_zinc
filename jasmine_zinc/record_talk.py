@@ -25,7 +25,7 @@ def record_talk(
     cid: int,
     talk: Talk,
     frequency: int,
-    timeout: float = 3,
+    timeout: float = 15,
 ) -> RecordTalkResponse:
     api_url = urljoin(server_url, f'SAVE2/{int(cid)}/{int(frequency)}')
 
