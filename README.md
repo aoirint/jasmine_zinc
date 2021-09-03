@@ -106,3 +106,8 @@ SERVER_URL=http://user:password@server_ip:7180
 
 ./scripts/record_talk 5201 てすと
 ```
+
+## Development: Load env vars from .env file
+```shell
+export $(cat .env | xargs)
+```
