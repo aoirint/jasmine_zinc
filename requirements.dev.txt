@@ -1,2 +1,3 @@
 python-dotenv
-playsound
+types-requests
+mypy

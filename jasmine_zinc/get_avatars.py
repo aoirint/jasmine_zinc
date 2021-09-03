@@ -10,7 +10,7 @@ from .Avatar import (
 def get_avatars(
     server_url: str,
     timeout: Union[float, Tuple[float, float]] = None,
-) -> Dict[str, Any]:
+) -> List[Avatar]:
     api_url = urljoin(server_url, 'AVATOR2')
     r = requests.get(api_url, timeout=timeout)
 

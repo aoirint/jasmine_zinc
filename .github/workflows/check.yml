@@ -1,0 +1,23 @@
+name: Check
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install Dependencies
+        run: |
+          pip3 install -r requirements.txt
+          pip3 install -r requirements.dev.txt
+
+      - name: mypy
+        run: mypy .
