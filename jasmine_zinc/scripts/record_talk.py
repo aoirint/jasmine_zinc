@@ -11,8 +11,9 @@ from shutil import copyfile
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('cid', type=int)
-    parser.add_argument('talktext', type=str)
+    parser.add_argument('-cid', '--cid', type=int, required=True)
+    parser.add_argument('-t', '--talktext', type=str)
+    parser.add_argument('-f', '--talkfile', type=str)
     parser.add_argument('--frequency', type=int, default=48000)
     parser.add_argument('--no-play', action='store_true')
     parser.add_argument('--save', action='store_true')
@@ -22,13 +23,22 @@ def main():
     add_talk_arguments(parser=parser)
     args = parser.parse_args()
 
-    cid = args.cid
-    talktext = args.talktext
     server_url = args.server_url
     timeout = args.timeout
-    frequency = args.frequency
 
     assert server_url is not None, 'Server URL must be specified (option --server-url or env var SERVER_URL).'
+
+    cid = args.cid
+    talktext = args.talktext
+    talkfile = args.talkfile
+
+    assert (talktext is not None) ^ (talkfile is not None), 'One of --talktext or --talkfile is required.'
+
+    if talkfile:
+        with open(talkfile, 'r') as fp:
+            talktext = fp.read()
+
+    frequency = args.frequency
 
     no_play = args.no_play
     save = args.save
